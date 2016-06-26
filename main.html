@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+<head>
+
+    <title>simple calc</title>
+
+    <meta charset = "utf-8">
+
+    <link rel = "stylesheet" type = "text/css" href = "reset.css"/>
+<!--<link rel = "stylesheet" type = "text/css" href = "../simple calc/reset.css"/>-->
+<!--<link rel = "stylesheet" type = "text/css" href = "../simple calc/........."/>-->
+<!--<link rel = "stylesheet" type = "text/css" href = "../simple calc/........."/>-->
+<!--<link rel = "stylesheet" type = "text/css" href = "../simple calc/........."/>-->
+
+    <script type = "application/javascript" src = "calculate.js"></script>
+    <script type = "application/javascript" src = "userinput.js"></script>
+<!--<script type = "application/javascript" src = "../simple calc/calculate.js"></script>-->
+<!--<script type = "application/javascript" src = "../simple calc/userinput.js"></script>-->
+<!--<script type = "application/javascript" src = "../simple calc/............"></script>-->
+<!--<script type = "application/javascript" src = "../simple calc/............"></script>-->
+<!--<script type = "application/javascript" src = "../simple calc/............"></script>-->
+
+    <script type = "application/javascript">
+
+    // always use the "var" keyword to declare a variable (except for window.onload)
+    //
+    // if you want a global variable, declare it here
+    // if you want a local variable, declare it inside a function
+
+    /*  ----------------------------------------------------------------------------------
+        window.onload
+        ---------------------------------------------------------------------------------- */
+
+        window.onload = function()
+        {
+            //
+
+            document.addEventListener("keydown" , evtKeyBoard, false);
+            document.addEventListener("keypress", evtKeyBoard, false);
+            document.addEventListener("input"   , evtKeyBoard, false);
+            document.addEventListener("keyup"   , evtKeyBoard, false);
+
+            document.addEventListener("mousedown", evtMouse, false);
+            document.addEventListener("mousemove", evtMouse, false);
+            document.addEventListener("mouseup"  , evtMouse, false);
+
+            function evtKeyBoard(evt) { userInputKeyBoard(evt); }
+            function evtMouse(evt)    { userInputMouse(evt)   ; }
+
+        }; // semi colon because this function is a variable
+
+    </script>
+
+    <style type = "text/css">
+
+        *
+        {
+                    box-sizing: border-box;
+               -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+
+        input[type = "button"]
+        {
+            width: 50px;
+        }
+
+    </style>
+
+</head>
+<body style = "background-color: rgba(255, 0, 255, 0);">
+
+    <!--
+        to make div as narrow as possible, use one of the following
+
+        style = "position: absolute; left: 20px; top: 20px;"
+        style = "display: inline-block;"
+        style = "display: table;"
+    -->
+
+    <div style = "position: absolute; left: 20px; top: 20px; background-color: rgb(240, 240, 240);">
+
+        <input type = "text" id = "calculator display" style = "width: 100%;"><br><br>
+
+        <input type = "button" value = "1">
+        <input type = "button" value = "2">
+        <input type = "button" value = "3">
+        <input type = "button" value = "+"><br><div style = "height: 2px;"></div><!--
+     --><input type = "button" value = "4">
+        <input type = "button" value = "5">
+        <input type = "button" value = "6">
+        <input type = "button" value = "-"><br><div style = "height: 2px;"></div><!--
+     --><input type = "button" value = "7">
+        <input type = "button" value = "8">
+        <input type = "button" value = "9">
+        <input type = "button" value = "x"><br><div style = "height: 2px;"></div><!--
+     --><input type = "button" value = "C">
+        <input type = "button" value = "0">
+        <input type = "button" value = "=">
+        <input type = "button" value = "/">
+
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

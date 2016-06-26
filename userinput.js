@@ -44,18 +44,18 @@
 
         //  console.log(evt); // uncomment this line and press F12 in Chrome or IE to see dump, click triangle to expand
 
-            var but = "";       // "left", "middle", "right"
-            var typ = evt.type; // "mousedown", "mousemove", "mouseup"
-
-            switch (evt.button)
-            {
-                case 0: { but = "left"  ; break; } // always use break
-                case 1: { but = "middle"; break; } // always use break
-                case 2: { but = "right" ; break; } // always use break
-            }
-
             if (evt.target.nodeName.toLowerCase() === "input") // always use three equal signs
             {
+                var but = "";       // "left", "middle", "right"
+                var typ = evt.type; // "mousedown", "mousemove", "mouseup"
+
+                switch (evt.button)
+                {
+                    case 0: { but = "left"  ; break; } // always use break
+                    case 1: { but = "middle"; break; } // always use break
+                    case 2: { but = "right" ; break; } // always use break
+                }
+
                 switch (evt.target.type.toLowerCase())
                 {
                     case "text":
@@ -86,7 +86,6 @@
                 }
             }
         }
-
 
 
 

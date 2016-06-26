@@ -14,7 +14,7 @@
 
             try
             {
-                ret = eval(str); // preferrably eval is not used, use e.g. shunting yard algorithm instead
+                ret = "" + eval(str); // preferrably eval is not used, use e.g. shunting yard algorithm instead
             }
             catch (err)
             {
